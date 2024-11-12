@@ -29,26 +29,6 @@ The **Repository Project** provides a centralized way to store, organize, and re
 - **Python**: Back-end server functionality and data handling.
 - **HTML & CSS**: Front-end for creating a visually appealing user interface.
 
-Repository-Project/
-│
-├── data/
-│   └── resources.db          # Database containing stored resources
-│
-├── src/
-│   ├── server.py             # Main server application file
-│   ├── database.py           # Database management functions
-│   ├── utils.py              # Helper functions for handling resources
-│
-├── static/
-│   └── styles.css            # CSS styles for the web interface
-│
-├── templates/
-│   └── index.html            # Main HTML page for the repository UI
-│
-├── README.md                 # Project README file
-└── requirements.txt          # Required packages and dependencies
-
-
 
 ## Installation
 1. Clone the repository:
