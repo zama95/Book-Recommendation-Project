@@ -29,8 +29,6 @@ The **Repository Project** provides a centralized way to store, organize, and re
 - **Python**: Back-end server functionality and data handling.
 - **HTML & CSS**: Front-end for creating a visually appealing user interface.
 
-## Project Structure
-
 Repository-Project/
 │
 ├── data/
@@ -49,6 +47,7 @@ Repository-Project/
 │
 ├── README.md                 # Project README file
 └── requirements.txt          # Required packages and dependencies
+
 
 
 ## Installation
