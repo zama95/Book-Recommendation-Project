@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommender System</title>
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/kGgvt5Dk/imgfavi.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+        body{
+        background-image:url("https://i.postimg.cc/3R8DRbcR/pexels-photo-1323550.jpg");
+        background-color:#cccccc;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+
+    </style>
+
+</head>
+
+<style>
+    .text-white{
+    color:black;
+    font-family:monospace;
+    font-size:15px;
+    margin-bottom:10px
+    }
+
+</style>
+<style>
+    .navbar-brand{
+    font-family:Times New Roman;
+    font-size:25px
+    }
+
+
+</style>
+
+<style>
+    .nav-style{
+    font-family:Georgia;
+    font-size:15px;
+    font-style:bold;
+    }
+
+
+</style>
+
+<style>
+    .form-control{
+     text-transform: lowercase;
+    }
+
+
+
+
+</style>
+
+<style>
+    .error_message{
+    font-size:40px;
+    color:black;
+    margin-top:50px;
+    text-align:center;
+    border-radius: 25px;
+    border: 5px solid #384C68;
+
+
+
+    }
+
+
+</style>
+
+<body>
+
+<nav class="navbar" style="background-color:#384C68">
+    <a class="navbar-brand" style="color:white">Book Recommender</a>
+    <ul class="nav navbar-nav">
+        <li class="nav-style"><a href="/" style="color:black">Home</a></li>
+        <li class="nav-style"><a href="/recommend" style="color:black">Recommend</a></li>
+        <li class="nav-style"><a href="/about" style="color:black">About</a></li>
+
+    </ul>
+
+
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-white" style="font-size:50px; font-family:times new roman">Recommend Books</h1>
+            <form action="/recommend_books" method="post">
+                <input required aria-labelledby="search-label" placeholder="Type to search..." name="user_input"
+                       type="text" class=" form-control "><br>
+                <input type="submit" class="btn btn-lg btn-warning" style="font-family:georgia">
+
+                {% if error %}
+                <div id="error_message" class="error_message">{{error}}</div>
+                {% endif %}
+
+
+            </form>
+
+
+            {% if data %}
+
+            {% for i in data %}
+
+        </div>
+        <div class="col-md-3" style="margin-top:50px">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="{{i[2]}}">
+                    <p class="text-white">{{i[0]}}</p>
+                    <h4 class="text-white">{{i[1]}}</h4>
+                </div>
+            </div>
+
+
+            {% endfor %}
+
+
+            {% endif %}
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

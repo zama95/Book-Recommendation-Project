@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommender System</title>
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/kGgvt5Dk/imgfavi.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+        body {
+        background-image:url("https://i.postimg.cc/FHL8KTM0/bgimg1.png");
+        background-color:#cccccc;
+        background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+    </style>
+
+</head>
+
+<style>
+    .text-white{
+    color:white;
+    font-family:monospace;
+    font-size:15px;
+
+
+    margin-bottom:10px
+
+    }
+
+    .text-white span{
+    background-color:#384C68;
+    border-radius:20px;
+
+    }
+
+
+
+
+</style>
+
+
+<style>
+    .card-img-top{
+    height:500px;
+    width:400px;
+    }
+
+
+</style>
+
+
+<style>
+    .font{
+    font-style:italic   ;
+    font-family: "Times New Roman";
+    color:white;
+
+
+    font-size:20px;
+    margin-bottom:15px;
+    margin-top:15px
+
+    }
+
+    .font span{
+    background-color:black;
+    }
+
+
+</style>
+
+<style>
+    .navbar-brand{
+    font-family:Times New Roman;
+    font-size:25px
+    }
+
+
+</style>
+
+<style>
+    .nav-style{
+    font-family:Georgia;
+    font-size:15px;
+    font-style:bold;
+    }
+
+
+</style>
+
+<style>
+    .navbar {  border: none;
+
+    }
+
+
+</style>
+
+<style>
+    .header{
+      color:black;
+    font-family:monospace;
+    font-size:15px;
+
+
+    margin-bottom:10px
+
+    }
+
+    .header span{
+      background-color:#D9DAD9;
+
+    }
+
+
+
+
+</style>
+
+
+<body>
+
+
+<nav class="navbar" style="background-color:#384C68">
+    <a class="navbar-brand" style="color:white">Book Recommender</a>
+    <ul class="nav navbar-nav">
+        <li class="nav-style"><a href="/" style="color:black">Home</a></li>
+        <li class="nav-style"><a href="/recommend" style="color:black">Recommend</a></li>
+        <li class="nav-style"><a href="/about" style="color:black">About</a></li>
+
+
+    </ul>
+
+
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-20" style="margin-left:410px">
+            <h1 class="header" style="font-size:50px; font-family:Georgia; "><span>Top 50 Books</span></h1>
+        </div>
+
+        {%for i in range (book_name|length)%}
+
+        <div class="col-md-6" style="margin-top:50px">
+
+
+            <div class="card" style="margin-left:70px">
+                <div class="card-body">
+
+                    <img class="card-img-top" src={{ image[i] }}>
+                    <p class="font"><span>{{  book_name[i]  }}</span></p>
+
+                    <h4 class="text-white"><span>{{  author[i]  }}</span></h4>
+                    <h4 class="text-white"><span>Votes - {{  votes[i]  }}</span></h4>
+                    <h4 class="text-white"><span>Rating - {{  rating[i]   }}</span></h4>
+                </div>
+
+
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
