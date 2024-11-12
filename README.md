@@ -84,7 +84,7 @@ git push origin feature/AmazingFeature
 
 5. Open a Pull Request: Once your changes are pushed to your forked repository, open a pull request to the main branch.
 
-About Me
+## About Me
 I am a freelance full-stack developer and have been working as a software developer for the past two years. I specialize in HTML, CSS, JavaScript, responsive web design, and .NET technologies, including C#, VB, ASP.NET Web Forms, Windows Forms, .NET Core, SQL Server, and APIs. You can reach out to me for collaboration or freelance work opportunities.
 
 Location: Kurla West, Mumbai - 400070
